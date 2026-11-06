@@ -1,0 +1,11 @@
+webhook_form:
+  js:
+    js/webhook-form.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+
+webhook_list:
+  css:
+    component:
+      css/webhook-list.css: {}

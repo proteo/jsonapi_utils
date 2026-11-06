@@ -1,0 +1,5 @@
+jsonapi_utils.settings:
+  title: 'JSON:API Utilities'
+  description: 'Configure JSON:API utilities and frontend cache webhooks.'
+  parent: system.admin_config_services
+  route_name: jsonapi_utils.settings

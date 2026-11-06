@@ -1,0 +1,16 @@
+{
+  "name": "proteo/jsonapi_utils",
+  "description": "A Drupal module providing enhancements when working with a JSON:API-based front-end.",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/proteo/jsonapi_utils",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Proteo",
+      "email": "me@proteo.dev"
+    }
+  ],
+  "require": {
+    "php": ">=8.4"
+  }
+}

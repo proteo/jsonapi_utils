@@ -1,0 +1,5 @@
+jsonapi_utils.webhook.add:
+  route_name: entity.jsonapi_utils_webhook.add_form
+  title: 'Add webhook'
+  appears_on:
+    - entity.jsonapi_utils_webhook.collection

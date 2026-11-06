@@ -1,0 +1,5 @@
+/* The name column takes all spare width; actions shrink to their content. */
+.jsonapi-utils-webhooks th:first-child,
+.jsonapi-utils-webhooks td:first-child {
+  width: 100%;
+}

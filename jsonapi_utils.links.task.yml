@@ -1,0 +1,21 @@
+# Same layout as JSON:API Extras: one tab on the JSON:API settings page that
+# holds two sub tabs.
+jsonapi_utils.tab:
+  route_name: jsonapi_utils.settings
+  base_route: jsonapi.settings
+  title: 'JSON:API Utilities'
+  weight: 10
+
+jsonapi_utils.tab.settings:
+  route_name: jsonapi_utils.settings
+  base_route: jsonapi_utils.settings
+  title: 'Settings'
+  parent_id: jsonapi_utils.tab
+  weight: 0
+
+jsonapi_utils.tab.webhooks:
+  route_name: entity.jsonapi_utils_webhook.collection
+  base_route: entity.jsonapi_utils_webhook.collection
+  title: 'Frontend Cache'
+  parent_id: jsonapi_utils.tab
+  weight: 10

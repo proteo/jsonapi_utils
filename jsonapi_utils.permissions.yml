@@ -1,0 +1,9 @@
+administer jsonapi utilities:
+  title: 'Administer JSON:API Utilities'
+  description: 'Access the JSON:API Utilities configuration screens and change the general settings.'
+  restrict access: true
+
+manage jsonapi utilities webhooks:
+  title: 'Manage JSON:API Utilities frontend cache webhooks'
+  description: 'View, create, edit, enable, disable, flush and delete frontend cache webhooks.'
+  restrict access: true

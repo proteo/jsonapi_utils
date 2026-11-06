@@ -1,0 +1,20 @@
+services:
+  Drupal\jsonapi_utils\WebhookDispatcher:
+    autowire: true
+
+  # Declared explicitly so it can be tagged; destruct() runs on kernel.terminate
+  # while the database connection is still open.
+  Drupal\jsonapi_utils\Hook\EntityHooks:
+    autowire: true
+    tags:
+      - { name: needs_destruction }
+
+  Drupal\jsonapi_utils\EventSubscriber\SettingsSubscriber:
+    arguments:
+      - '@plugin.manager.field.field_type'
+      - '@typed_data_manager'
+      - '@entity_field.manager'
+      - '@cache_tags.invalidator'
+      - '@cache.jsonapi_normalizations'
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,8 @@
+name: Custom JSON:API Utilities
+description: Provides enhancements when working with a JSON:API-based front-end.
+type: module
+core_version_requirement: ^10.3 || ^11
+package: Web services
+dependencies:
+  - drupal:image
+  - drupal:jsonapi

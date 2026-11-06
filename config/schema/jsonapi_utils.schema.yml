@@ -1,0 +1,36 @@
+jsonapi_utils.settings:
+  type: config_object
+  label: 'JSON:API Utilities settings'
+  mapping:
+    include_image_style_dimensions:
+      type: boolean
+      label: 'Include image style dimensions'
+
+jsonapi_utils.webhook.*:
+  type: config_entity
+  label: 'Frontend cache webhook'
+  mapping:
+    id:
+      type: machine_name
+      label: 'Machine name'
+    label:
+      type: required_label
+      label: 'Label'
+    url:
+      type: uri
+      label: 'Remote webhook URL'
+    secret:
+      type: string
+      label: 'Remote webhook secret'
+    source:
+      type: string
+      label: 'Source'
+    entities:
+      type: sequence
+      label: 'Enabled entities'
+      sequence:
+        type: sequence
+        label: 'Bundles'
+        sequence:
+          type: string
+          label: 'Bundle'

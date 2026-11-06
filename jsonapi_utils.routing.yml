@@ -1,0 +1,43 @@
+jsonapi_utils.settings:
+  path: '/admin/config/services/jsonapi/utils'
+  defaults:
+    _form: '\Drupal\jsonapi_utils\Form\SettingsForm'
+    _title: 'JSON:API Utilities'
+  requirements:
+    _permission: 'administer jsonapi utilities'
+
+jsonapi_utils.webhook.enable:
+  path: '/admin/config/services/jsonapi/utils/webhooks/{jsonapi_utils_webhook}/enable'
+  defaults:
+    _controller: '\Drupal\jsonapi_utils\Controller\WebhookController::enable'
+  requirements:
+    _permission: 'manage jsonapi utilities webhooks'
+    _csrf_token: 'TRUE'
+  options:
+    parameters:
+      jsonapi_utils_webhook:
+        type: entity:jsonapi_utils_webhook
+
+jsonapi_utils.webhook.disable:
+  path: '/admin/config/services/jsonapi/utils/webhooks/{jsonapi_utils_webhook}/disable'
+  defaults:
+    _controller: '\Drupal\jsonapi_utils\Controller\WebhookController::disable'
+  requirements:
+    _permission: 'manage jsonapi utilities webhooks'
+    _csrf_token: 'TRUE'
+  options:
+    parameters:
+      jsonapi_utils_webhook:
+        type: entity:jsonapi_utils_webhook
+
+jsonapi_utils.webhook.flush:
+  path: '/admin/config/services/jsonapi/utils/webhooks/{jsonapi_utils_webhook}/flush'
+  defaults:
+    _controller: '\Drupal\jsonapi_utils\Controller\WebhookController::flush'
+  requirements:
+    _permission: 'manage jsonapi utilities webhooks'
+    _csrf_token: 'TRUE'
+  options:
+    parameters:
+      jsonapi_utils_webhook:
+        type: entity:jsonapi_utils_webhook
